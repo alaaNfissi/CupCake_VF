@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.ModifierCatalogueController">
+   <children>
+      <Label layoutX="451.0" layoutY="107.0" text="Modifier votre catalogue" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="566.0" layoutX="425.0" layoutY="172.0" stroke="#616161" strokeType="INSIDE" width="451.0" />
+      <Label layoutX="467.0" layoutY="210.0" text="Id_catalogue:" textFill="#100606">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="464.0" layoutY="264.0" text="Libelle_catalogue:" textFill="#100606">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="464.0" layoutY="307.0" text="Date_debut:" textFill="#100606">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="465.0" layoutY="356.0" text="Date_fin:" textFill="#100606">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="462.0" layoutY="413.0" text="Description:" textFill="#100606">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="452.0" layoutY="468.0" text="Id_patisserie:" textFill="#100606">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <DatePicker fx:id="txtDate_debut" layoutX="600.0" layoutY="304.0" />
+      <DatePicker fx:id="txtDate_fin" layoutX="600.0" layoutY="357.0" />
+      <JFXTextField fx:id="txtId_catalogue" layoutX="596.0" layoutY="199.0" maxWidth="184.0" minWidth="184.0" prefHeight="31.0" prefWidth="184.0" />
+      <JFXTextField fx:id="txtLibelle_catalogue" layoutX="595.0" layoutY="249.0" maxWidth="184.0" minWidth="174.0" prefHeight="31.0" prefWidth="184.0" />
+      <JFXTextField fx:id="txtDescription" layoutX="593.0" layoutY="404.0" maxWidth="184.0" minWidth="184.0" prefHeight="31.0" prefWidth="184.0" />
+      <JFXTextField fx:id="txtId_patisserie" layoutX="592.0" layoutY="458.0" maxWidth="184.0" minWidth="184.0" prefHeight="31.0" prefWidth="184.0" />
+      <JFXButton fx:id="btnModifier" buttonType="RAISED" layoutX="774.0" layoutY="680.0" onAction="#modifierCatalogue" prefHeight="37.0" prefWidth="87.0" style="-fx-background-color: #00C0EF;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="txtRetour" fitHeight="53.0" fitWidth="57.0" layoutX="32.0" layoutY="24.0" onMouseClicked="#retour" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/app-1646213_960_720.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

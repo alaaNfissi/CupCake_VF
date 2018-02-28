@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.ModifierProduitController">
+   <children>
+      <Label layoutX="501.0" layoutY="60.0" text="Modifier votre produit" underline="true">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="680.0" layoutX="422.0" layoutY="146.0" stroke="#616161" strokeType="INSIDE" width="505.0" />
+      <Label layoutX="466.0" layoutY="248.0" text="Libelle_produit:" textFill="#0d0505">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="465.0" layoutY="297.0" text="Categorie:" textFill="#0d0505">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="344.0" text="Prix:" textFill="#0d0505">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="463.0" layoutY="394.0" text="Date_expiration:" textFill="#0d0505">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="442.0" text="Quantite:" textFill="#0d0505">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="488.0" text="Description:" textFill="#0d0505">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="467.0" layoutY="531.0" text="Note:" textFill="#0d0505">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="583.0" text="Image:" textFill="#0d0505">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtDate" layoutX="567.0" layoutY="390.0" />
+      <ImageView fx:id="imageViewProduit" fitHeight="115.0" fitWidth="174.0" layoutX="567.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="txtRetour" fitHeight="53.0" fitWidth="57.0" layoutX="22.0" layoutY="14.0" onMouseClicked="#retour" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/app-1646213_960_720.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtId_produit" editable="false" layoutX="561.0" layoutY="184.0" maxWidth="186.0" minWidth="186.0" prefHeight="31.0" prefWidth="186.0" />
+      <JFXTextField fx:id="txtLibelle_produit" layoutX="560.0" layoutY="233.0" maxWidth="186.0" minWidth="186.0" prefHeight="31.0" prefWidth="186.0" />
+      <JFXTextField fx:id="txtCategorie" layoutX="561.0" layoutY="280.0" maxWidth="186.0" minWidth="149.0" prefHeight="31.0" prefWidth="186.0" />
+      <JFXTextField fx:id="txtPrix" layoutX="561.0" layoutY="330.0" maxWidth="186.0" minWidth="174.0" prefHeight="31.0" prefWidth="186.0" />
+      <JFXTextField fx:id="txtQuantite" layoutX="562.0" layoutY="431.0" maxWidth="186.0" minWidth="186.0" prefHeight="31.0" prefWidth="186.0" />
+      <JFXTextField fx:id="txtDescription" layoutX="560.0" layoutY="473.0" maxWidth="186.0" minWidth="149.0" prefHeight="31.0" prefWidth="186.0" />
+      <JFXTextField fx:id="txtNote" layoutX="560.0" layoutY="520.0" maxWidth="193.0" minWidth="149.0" prefHeight="31.0" prefWidth="186.0" />
+      <JFXTextField fx:id="txtId_patisserie" layoutX="562.0" layoutY="733.0" maxWidth="180.0" minWidth="180.0" prefHeight="31.0" prefWidth="180.0" />
+      <JFXButton fx:id="btnImportImage" buttonType="RAISED" layoutX="566.0" layoutY="575.0" onAction="#importImage" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: #F39C12;" text="Importer une image" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnModifier" buttonType="RAISED" layoutX="826.0" layoutY="773.0" onAction="#modifierProduit" prefHeight="37.0" prefWidth="87.0" style="-fx-background-color: #00C0EF;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

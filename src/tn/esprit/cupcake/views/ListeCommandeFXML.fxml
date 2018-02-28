@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../stylesheets/custom.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.ListeCommandeFXMLController">
+   <children>
+      <SplitPane dividerPositions="0.11663286004056796, 0.5851926977687627" layoutX="1.0" layoutY="5.0" orientation="VERTICAL" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <StackPane prefHeight="111.0" prefWidth="1198.0" style="-fx-background-color: #00718A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="66.0" prefWidth="189.0" text="Vos Commandes" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <ImageView fitHeight="89.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/order-history.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="586.0" prefWidth="852.0">
+               <children>
+                  <SplitPane dividerPositions="0.47157190635451507" prefHeight="525.0" prefWidth="1198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <VBox prefHeight="648.0" prefWidth="560.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="35.0" prefWidth="560.0" style="-fx-background-color: #00718A;">
+                                       <children>
+                                          <Label text="Commandes       " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="refreshbtn" onAction="#rafraichirTableCommandes" prefHeight="43.0" prefWidth="49.0" text=" ">
+                                             <graphic>
+                                                <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@icons/refresh.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="tableCommandes" prefHeight="645.0" prefWidth="546.0">
+                                      <columns>
+                                        <TableColumn fx:id="numCommande" prefWidth="107.0" text="N°Commande" />
+                                        <TableColumn fx:id="dateCommande" prefWidth="167.0" text="Date de la commande" />
+                                          <TableColumn fx:id="libellePatisserie" prefWidth="147.0" text="Libelle Patisserie" />
+                                          <TableColumn fx:id="prixTotale" prefWidth="124.0" text="Prix Totale" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="666.0" prefWidth="792.0">
+                           <children>
+                              <VBox layoutX="14.0" prefHeight="648.0" prefWidth="628.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="58.0" prefWidth="628.0" style="-fx-background-color: #00718A;">
+                                       <children>
+                                          <Label prefHeight="61.0" prefWidth="179.0" text="Produits commandés" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="tableProduits" prefHeight="346.0" prefWidth="628.0">
+                                      <columns>
+                                        <TableColumn fx:id="LibelleProduit" prefWidth="121.0" text="Libelle Produit" />
+                                        <TableColumn fx:id="categorieProduit" prefWidth="110.0" text="Categorie" />
+                                          <TableColumn fx:id="prixProduit" prefWidth="65.0" text="Prix" />
+                                          <TableColumn fx:id="dateExpiration" prefWidth="134.0" text="Date d'expiration" />
+                                          <TableColumn fx:id="description" prefWidth="130.0" text="Description" />
+                                          <TableColumn fx:id="note" prefWidth="66.0" text="Note /5" />
+                                          <TableColumn fx:id="lienImageProduit" prefWidth="76.0" text="image" visible="false" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="332.0" prefWidth="1198.0">
+               <children>
+                  <SplitPane dividerPositions="0.47157190635451507" prefHeight="296.0" prefWidth="1198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="527.0">
+                           <children>
+                              <VBox prefHeight="207.0" prefWidth="560.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="29.0" prefWidth="560.0" style="-fx-background-color: #00718A;">
+                                       <children>
+                                          <Label text="Info Livraison de la commande" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="tableLivraison" prefHeight="303.0" prefWidth="560.0">
+                                      <columns>
+                                        <TableColumn fx:id="etatLivraison" prefWidth="249.0" text="Etat de la Livraison" />
+                                        <TableColumn fx:id="dateLivraison" minWidth="0.0" prefWidth="147.0" text="Date de la livraison" />
+                                          <TableColumn fx:id="prixLivraison" prefWidth="163.0" text="Frais de la livraison" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="381.0" prefWidth="628.0">
+                           <children>
+                              <StackPane prefHeight="302.0" prefWidth="628.0" style="-fx-background-color: #00718A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fx:id="imageProduit" fitHeight="195.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </StackPane>
+                              <Label text="Photo du Produit" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

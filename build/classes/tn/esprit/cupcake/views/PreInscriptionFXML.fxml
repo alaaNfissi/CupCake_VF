@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="242.0" prefWidth="477.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.PreInscriptionController">
+<!--    <stylesheets>
+        <URL value="@/tn/esprit/cupcake/styles/bootstrap3.css" />
+    </stylesheets>-->
+   <children>
+      <Label layoutX="83.0" layoutY="14.0" text="Vous n'êtes pas encore inscrit ?">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="59.0" prefHeight="27.0" prefWidth="235.0" text="Veuillez créer votre compte">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXRadioButton fx:id="radioClient" layoutX="194.0" layoutY="104.0" text="Client">
+         <toggleGroup>
+            <ToggleGroup fx:id="choixCompte" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="radioPatissier" layoutX="194.0" layoutY="137.0" text="Patissier" toggleGroup="$choixCompte" />
+      <JFXButton fx:id="btnGoInscription" buttonType="RAISED" layoutX="169.0" layoutY="175.0" onAction="#GoInscription" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #00A65A;" text="Créer un compte" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

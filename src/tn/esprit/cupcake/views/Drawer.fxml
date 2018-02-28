@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="149.0" styleClass="card-unpadded" stylesheets="@../stylesheets/styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.DrawerController">
+   <children>
+      <ImageView fx:id="avatarImg" fitHeight="161.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="homeBtn" accessibleText="homeMenu" prefHeight="43.0" prefWidth="200.0" styleClass="drawer-buttons" text="Home" />
+      <JFXButton fx:id="mesCommandesbtn" accessibleText="listecommande" layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="200.0" styleClass="drawer-buttons" text="Mes Commandes" />
+      <JFXButton fx:id="mesPromostionsbtn" accessibleText="mesPromotions" layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="200.0" styleClass="drawer-buttons" text="Mes Promotions" />
+      <JFXButton fx:id="mesEvenementsbtn" accessibleText="mesEvenements" prefHeight="43.0" prefWidth="200.0" styleClass="drawer-buttons" text="Mes Evenements" />
+      <JFXButton fx:id="statistiquebtn" accessibleText="statistique" layoutX="10.0" layoutY="96.0" prefHeight="43.0" prefWidth="200.0" styleClass="drawer-buttons" text="Statistiques" />
+      <JFXButton fx:id="monComptebtn" accessibleText="modifierCompteClient" prefHeight="43.0" prefWidth="200.0" styleClass="drawer-buttons" text="Mon Compte" />
+      <JFXButton fx:id="logoutBtn" accessibleText="logoutMenu" layoutX="10.0" layoutY="182.0" onAction="#logOut" prefHeight="43.0" prefWidth="200.0" styleClass="drawer-buttons" text="Log out" />
+      <JFXButton fx:id="exitBtn" accessibleText="exitMenu" layoutX="10.0" layoutY="182.0" onAction="#exit" prefHeight="43.0" prefWidth="200.0" styleClass="drawer-buttons" text="Exit" />
+      <JFXButton prefHeight="398.0" prefWidth="149.0" styleClass="drawer-buttons" text="  " />
+   </children>
+</VBox>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.StockmodifierController">
+   <children>
+      <TextField fx:id="textid" alignment="TOP_CENTER" disable="true" layoutX="338.0" layoutY="114.0" />
+      <ImageView fitHeight="414.0" fitWidth="389.0" layoutX="706.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/modif.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnmodification" buttonType="RAISED" layoutX="49.0" layoutY="705.0" onMouseClicked="#modificationProduitStock" prefHeight="34.0" prefWidth="202.0" style="-fx-background-color: #0081FF;" text="Confirmer Modification" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE_ALT" size="16.0" wrappingWidth="21.571428298950195" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnreset" buttonType="RAISED" layoutX="468.0" layoutY="696.0" onMouseClicked="#reset" prefHeight="34.0" prefWidth="181.0" style="-fx-background-color: #008F82;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="textlib" focusColor="#2196f3" labelFloat="true" layoutX="264.0" layoutY="169.0" maxWidth="295.0" minWidth="224.0" prefHeight="38.0" prefWidth="295.0">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textcat" focusColor="#2196f3" labelFloat="true" layoutX="264.0" layoutY="258.0" maxWidth="295.0" minWidth="224.0" prefHeight="38.0" prefWidth="295.0">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textprix" focusColor="#2196f3" labelFloat="true" layoutX="262.0" layoutY="346.0" maxWidth="295.0" minWidth="224.0" prefHeight="38.0" prefWidth="295.0">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="textdate" layoutX="265.0" layoutY="438.0" prefHeight="30.0" prefWidth="170.0" />
+      <JFXTextField fx:id="textquan" focusColor="#2196f3" labelFloat="true" layoutX="265.0" layoutY="532.0" maxWidth="295.0" minWidth="224.0" prefHeight="38.0" prefWidth="295.0">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textdesc" focusColor="#2196f3" labelFloat="true" layoutX="264.0" layoutY="608.0" maxWidth="295.0" minWidth="224.0" prefHeight="38.0" prefWidth="295.0">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="91.0" layoutY="116.0" prefHeight="22.0" prefWidth="181.0" text="Id_produit">
+         <font>
+            <Font name="Roboto Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="188.0" prefHeight="22.0" prefWidth="149.0" text="Libelle_Produit">
+         <font>
+            <Font name="Roboto Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="277.0" prefHeight="22.0" prefWidth="149.0" text="Categorie">
+         <font>
+            <Font name="Roboto Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="365.0" prefHeight="22.0" prefWidth="149.0" text="Prix">
+         <font>
+            <Font name="Roboto Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="442.0" prefHeight="22.0" prefWidth="149.0" text="Date_Expiration">
+         <font>
+            <Font name="Roboto Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="540.0" prefHeight="22.0" prefWidth="149.0" text="Quantité">
+         <font>
+            <Font name="Roboto Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="621.0" prefHeight="22.0" prefWidth="149.0" text="Description">
+         <font>
+            <Font name="Roboto Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="14.0" prefHeight="80.0" prefWidth="429.0" style="-fx-text-fill: #162E3B; -fx-font-size: 20; -fx-font-weight: bold; -fx-alignment: left;" text="                     Modification Produit Stock" />
+      <ImageView fx:id="btnRetour" fitHeight="80.0" fitWidth="83.0" layoutX="1095.0" layoutY="14.0" onMouseClicked="#retour" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/retour.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="14.0" fitWidth="16.0" layoutX="476.0" layoutY="706.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/reset.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

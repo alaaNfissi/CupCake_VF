@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="tn.esprit.cupcake.views.ListePatisseriesController">
+   <children>
+      <AnchorPane layoutX="168.0" layoutY="31.0" prefHeight="762.0" prefWidth="1012.0">
+         <children>
+            <TableView fx:id="tablePatisseries" prefHeight="762.0" prefWidth="1012.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="libelleCol" prefWidth="98.0" text="Libelle" />
+                  <TableColumn fx:id="adresseCol" prefWidth="132.0" text="Adresse" />
+                <TableColumn fx:id="specialiteCol" prefWidth="245.0" text="Spécialité" />
+                  <TableColumn fx:id="descriptionCol" prefWidth="536.0" text="Description" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

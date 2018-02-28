@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.CatalgueProduitController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="524.0" layoutX="376.0" layoutY="202.0" stroke="#616161" strokeType="INSIDE" width="549.0" />
+      <Label layoutX="409.0" layoutY="149.0" prefHeight="53.0" prefWidth="459.0" text="Ajout produit au catalogue" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="comboCatalogue" layoutX="598.0" layoutY="274.0" prefHeight="37.0" prefWidth="220.0" />
+      <JFXComboBox fx:id="comboProduit" layoutX="598.0" layoutY="411.0" prefHeight="25.0" prefWidth="220.0" />
+      <Label layoutX="392.0" layoutY="300.0" text="Selectionner votre catalogue:" textFill="#030202">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="392.0" layoutY="423.0" prefHeight="20.0" prefWidth="180.0" text="Selectionner votre produit:" textFill="#070303">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnValider" buttonType="RAISED" layoutX="808.0" layoutY="666.0" onAction="#ajouterPC" prefHeight="37.0" prefWidth="91.0" style="-fx-background-color: #00A65A;" text="Valider" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.AjoutProduitController">
+   <children>
+      <Label layoutX="564.0" layoutY="41.0" text="Ajout d'un produit" textAlignment="CENTER" textFill="#110b0b" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="668.0" layoutX="188.0" layoutY="127.0" stroke="#616161" strokeType="INSIDE" width="553.0" />
+      <Label layoutX="279.0" layoutY="268.0" text="Prix:" textFill="#0d0909">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="274.0" layoutY="322.0" text="Date_expiration:" textFill="#0d0909">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="276.0" layoutY="377.0" text="Quantite:" textFill="#0d0909">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="276.0" layoutY="422.0" text="Description:" textFill="#0d0909">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="365.0" layoutY="434.0" />
+      <Label layoutX="278.0" layoutY="469.0" text="Note:" textFill="#0d0909">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="278.0" layoutY="523.0" text="Image:" textFill="#0d0909">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="276.0" layoutY="221.0" text="Categorie:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <DatePicker fx:id="txtDate" layoutX="390.0" layoutY="320.0" prefHeight="25.0" prefWidth="183.0" />
+      <ImageView fx:id="imageViewProduit" fitHeight="115.0" fitWidth="149.0" layoutX="386.0" layoutY="557.0" pickOnBounds="true" preserveRatio="true" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="668.0" layoutX="781.0" layoutY="127.0" stroke="#616161" strokeType="INSIDE" width="401.0" />
+      <Label layoutX="272.0" layoutY="170.0" text="Libelle_produit:" textFill="#0d0909">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtLibelle" layoutX="386.0" layoutY="155.0" maxWidth="192.0" minWidth="192.0" prefHeight="31.0" prefWidth="192.0" />
+      <JFXTextField fx:id="txtCategorie" layoutX="386.0" layoutY="208.0" maxWidth="192.0" minWidth="185.0" prefHeight="31.0" prefWidth="192.0" />
+      <JFXTextField fx:id="txtPrix" layoutX="386.0" layoutY="256.0" maxWidth="192.0" minWidth="192.0" prefHeight="31.0" prefWidth="192.0" />
+      <JFXTextField fx:id="txtQuantite" layoutX="386.0" layoutY="368.0" maxWidth="192.0" minWidth="183.0" prefHeight="31.0" prefWidth="192.0" />
+      <JFXTextField fx:id="txtDescription" layoutX="386.0" layoutY="410.0" maxWidth="192.0" minWidth="183.0" prefHeight="31.0" prefWidth="192.0" />
+      <JFXTextField fx:id="txtNote" layoutX="384.0" layoutY="459.0" maxWidth="200.0" minWidth="183.0" prefHeight="31.0" prefWidth="198.0" />
+      <JFXTextField fx:id="txtId_patisserie" layoutX="386.0" layoutY="677.0" maxWidth="192.0" minWidth="183.0" prefHeight="31.0" prefWidth="192.0" />
+      <JFXButton fx:id="btnValider" buttonType="RAISED" layoutX="626.0" layoutY="747.0" onAction="#ajouterProduit" prefHeight="37.0" prefWidth="91.0" style="-fx-background-color: #00A65A;" text="Valider" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnImportImage" buttonType="RAISED" layoutX="390.0" layoutY="514.0" onAction="#importImage" prefHeight="37.0" prefWidth="183.0" style="-fx-background-color: #F39C12;" text="Importer une image" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="247.0" fitWidth="265.0" layoutX="873.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/cupk.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

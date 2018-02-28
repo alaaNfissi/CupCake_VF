@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.PaniermodiferController">
+    <stylesheets>
+        <URL value="@bootstrap3.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="CENTER" layoutX="376.0" layoutY="17.0" prefHeight="17.0" prefWidth="237.0" text="Mon Panier">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="367.0" layoutY="697.0" text="Quantité Du Produit Selectionné" />
+      <Label layoutX="784.0" layoutY="305.0" prefHeight="17.0" prefWidth="107.0" text="Prix Todal Du Panier" />
+      <Label layoutX="723.0" layoutY="36.0" text="Votre Panier Contient  ">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="988.0" layoutY="38.0" prefHeight="26.0" prefWidth="126.0" text="Produits">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ImageView fx:id="btnCpt" fitHeight="92.0" fitWidth="99.0" layoutX="14.0" layoutY="6.0" onMouseClicked="#EnvoyerCpt" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/retour.gif" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnsup" buttonType="RAISED" layoutX="43.0" layoutY="689.0" onMouseClicked="#supprimerProduitPanier" prefHeight="32.0" prefWidth="268.0" style="-fx-background-color: #EE4D39;" text="Supprimer Produit De Mon Panier" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="13.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="WHITE" glyphName="TRASH_ALT" layoutX="289.0" layoutY="710.0" size="16.0" wrappingWidth="21.571428298950195" />
+      <JFXTextField fx:id="textquan" alignment="CENTER" editable="false" focusColor="#2196f3" labelFloat="true" layoutX="550.0" layoutY="680.0" maxWidth="295.0" minWidth="77.0" prefHeight="38.0" prefWidth="77.0" unFocusColor="#4d4d4d">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="prixtotal" alignment="CENTER" editable="false" focusColor="#2196f3" labelFloat="true" layoutX="903.0" layoutY="295.0" maxWidth="295.0" minWidth="77.0" prefHeight="38.0" prefWidth="77.0" unFocusColor="#4d4d4d">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textcpt" alignment="CENTER" editable="false" focusColor="#2196f3" labelFloat="true" layoutX="931.0" layoutY="34.0" maxWidth="295.0" minWidth="49.0" prefHeight="38.0" prefWidth="49.0">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXListView fx:id="list2" layoutX="24.0" layoutY="197.0" onMouseClicked="#selectquan" prefHeight="453.0" prefWidth="667.0" />
+      <ImageView fitHeight="373.0" fitWidth="454.0" layoutX="743.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chariot.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="commanderPanierBtn" layoutX="938.0" layoutY="689.0" onAction="#versCommande" prefHeight="75.0" prefWidth="237.0" style="-fx-background-color: green;" text="Commander" textFill="#f2f2f2" />
+   </children>
+</AnchorPane>

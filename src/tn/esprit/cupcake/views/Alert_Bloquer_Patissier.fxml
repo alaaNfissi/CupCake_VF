@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../stylesheets/custom.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.Alert_Bloquer_PatissierController">
+   <children>
+      <TableView fx:id="TableUtilisateurs" layoutX="362.0" layoutY="59.0" prefHeight="727.0" prefWidth="765.0">
+        <columns>
+          <TableColumn fx:id="id_utilisateurCol" prefWidth="193.0" text="Id_utilisateur" />
+          <TableColumn fx:id="emailCol" prefWidth="144.0" text="email" />
+            <TableColumn fx:id="PseudoCol" prefWidth="206.0" text="Pseudo" />
+            <TableColumn fx:id="etat_compteCol" prefWidth="221.0" text="Etat_Compte" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="235.0" fitWidth="340.0" layoutX="83.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/avatar_admin.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="115.0" layoutY="330.0" text="Administration">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="432.0" prefHeight="62.0" prefWidth="626.0" text="Vous pouvez alerter ou BloquerLes patissier qui on beaucoupde reclamations ." textFill="#f50303">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="confirmerPatissierBtn" layoutX="92.0" layoutY="488.0" onAction="#ActionConfirmerPatissier" style="-fx-background-color: red;" text="Confirmer Inscription Patissier" textFill="WHITE" />
+   </children>
+</AnchorPane>

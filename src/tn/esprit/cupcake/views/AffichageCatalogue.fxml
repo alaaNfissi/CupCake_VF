@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" stylesheets="@../stylesheets/custom.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.AffichageCatalogueController">
+   <children>
+      <Label layoutX="321.0" layoutY="14.0" text="Liste des catalogues" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableCat" layoutX="111.0" layoutY="123.0" prefHeight="408.0" prefWidth="763.0">
+        <columns>
+          <TableColumn fx:id="txtId_catalogue" text="Id_catalogue" />
+          <TableColumn fx:id="txtLibelle_catalogue" prefWidth="150.0" text="Libelle_catalogue" />
+            <TableColumn fx:id="txtDate_debut" prefWidth="150.0" text="Date_debut" />
+            <TableColumn fx:id="txtDate_fin" prefWidth="150.0" text="Data_fin" />
+            <TableColumn fx:id="txtDescription" prefWidth="150.0" text="Description" />
+            <TableColumn fx:id="txtId_patisserie" text="Id_patisserie" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnLoad" buttonType="RAISED" layoutX="718.0" layoutY="77.0" onAction="#loadDataFromDatabase" prefHeight="37.0" prefWidth="155.0" style="-fx-background-color: #00A65A;" text="Voir mes catalogues" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSuivant" buttonType="RAISED" layoutX="147.0" layoutY="548.0" onAction="#recupererId" prefHeight="37.0" prefWidth="87.0" style="-fx-background-color: #00C0EF;" text="Modifier" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="txtSupprimer" buttonType="RAISED" layoutX="144.0" layoutY="629.0" onAction="#supprimerProduit" prefHeight="37.0" prefWidth="87.0" style="-fx-background-color: #BB0B0B;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ajouterCatalogueBtn" buttonType="RAISED" layoutX="781.0" layoutY="629.0" onAction="#GoAjouterCatalogue" prefHeight="37.0" prefWidth="155.0" style="-fx-background-color: #00A65A;" text="Ajouter un Catalogue" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

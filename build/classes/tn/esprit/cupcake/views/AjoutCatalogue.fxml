@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.AjoutCatalogueController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="636.0" layoutX="126.0" layoutY="103.0" stroke="#616161" strokeType="INSIDE" width="516.0" />
+      <Label layoutX="223.0" layoutY="43.0" text="Ajout d'un catalogue" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="139.0" text="Libelle:" />
+      <Label layoutX="185.0" layoutY="192.0" text="Date_debut:" />
+      <Label layoutX="184.0" layoutY="240.0" text="Date_fin:" />
+      <Label layoutX="186.0" layoutY="299.0" text="Description:" />
+      <DatePicker fx:id="txtDate_debut" layoutX="296.0" layoutY="188.0" />
+      <DatePicker fx:id="txtDate_fin" layoutX="296.0" layoutY="242.0" />
+      <JFXTextField fx:id="txtLibelle" layoutX="291.0" layoutY="126.0" maxWidth="183.0" minWidth="183.0" prefHeight="31.0" prefWidth="183.0" />
+      <JFXTextField fx:id="txtDescription" layoutX="293.0" layoutY="282.0" maxWidth="193.0" minWidth="174.0" prefHeight="31.0" prefWidth="183.0" />
+      <JFXButton fx:id="btnValider" buttonType="RAISED" layoutX="347.0" layoutY="429.0" onAction="#AjouterCatalogue" prefHeight="37.0" prefWidth="91.0" style="-fx-background-color: #00A65A;" text="Valider" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="636.0" layoutX="696.0" layoutY="104.0" stroke="#616161" strokeType="INSIDE" width="460.0" />
+      <Label layoutX="719.0" layoutY="146.0" text="Voulez vous affecter des produits à un catalogue?">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="affecter" buttonType="RAISED" layoutX="888.0" layoutY="435.0" onAction="#affecterProduitCatalogue" prefHeight="37.0" prefWidth="91.0" style="-fx-background-color: #00A65A;" text="Affecter" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

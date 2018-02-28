@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-image: #DB1702;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.cupcake.controllers.StockajoutController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="406.0" layoutY="31.0" prefHeight="91.0" prefWidth="458.0" text="               Ajouter Produit Au Stock">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <ImageView fitHeight="382.0" fitWidth="362.0" layoutX="704.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ajoutstock.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="textqua" focusColor="#2196f3" labelFloat="true" layoutX="219.0" layoutY="426.0" maxWidth="350.0" minWidth="224.0" prefHeight="38.0" prefWidth="350.0">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker fx:id="dateEntre" layoutX="226.0" layoutY="311.0" prefHeight="31.0" prefWidth="350.0" />
+      <JFXComboBox fx:id="comboNom" layoutX="226.0" layoutY="161.0" prefHeight="35.0" prefWidth="338.0" />
+      <JFXButton fx:id="btn1" layoutX="348.0" layoutY="707.0" onMouseClicked="#ajouter" prefHeight="30.0" prefWidth="213.0" style="-fx-background-color: #00A65A;" text="Ajouter Produit Au Stock" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="105.0" layoutY="183.0" prefHeight="22.0" prefWidth="115.0" text="Libelle_Produit">
+         <font>
+            <Font name="Roboto Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="315.0" prefHeight="22.0" prefWidth="115.0" text="Date_Expiration">
+         <font>
+            <Font name="Roboto Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="445.0" prefHeight="22.0" prefWidth="115.0" text="Quantité">
+         <font>
+            <Font name="Roboto Regular" size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
